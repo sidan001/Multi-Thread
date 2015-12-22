@@ -1,10 +1,10 @@
 package Thread.Interrupt;
 
 /**
- * Ê¹ÓÃ isInterrupted()·½·¨ÅĞ¶ÏÖĞ¶Ï×´Ì¬:
- * ¿ÉÒÔÔÚ Thread ¶ÔÏóÉÏµ÷ÓÃ isInterrupted()·½·¨À´¼ì²éÈÎºÎÏß³ÌµÄÖĞ¶Ï×´Ì¬¡£
- * ÕâÀïĞèÒª×¢Òâ£ºÏß³ÌÒ»µ©±»ÖĞ¶Ï£¬isInterrupted()·½·¨±ã»á·µ»Ø true£¬¶øÒ»µ© sleep()·½·¨Å×³öÒì³££¬
- * Ëü½«Çå¿ÕÖĞ¶Ï±êÖ¾£¬´ËÊ±isInterrupted()·½·¨½«·µ»Ø false¡£
+ * ä½¿ç”¨ isInterrupted()æ–¹æ³•åˆ¤æ–­ä¸­æ–­çŠ¶æ€:
+ * å¯ä»¥åœ¨ Thread å¯¹è±¡ä¸Šè°ƒç”¨ isInterrupted()æ–¹æ³•æ¥æ£€æŸ¥ä»»ä½•çº¿ç¨‹çš„ä¸­æ–­çŠ¶æ€ã€‚
+ * è¿™é‡Œéœ€è¦æ³¨æ„ï¼šçº¿ç¨‹ä¸€æ—¦è¢«ä¸­æ–­ï¼ŒisInterrupted()æ–¹æ³•ä¾¿ä¼šè¿”å› trueï¼Œè€Œä¸€æ—¦ sleep()æ–¹æ³•æŠ›å‡ºå¼‚å¸¸ï¼Œ
+ * å®ƒå°†æ¸…ç©ºä¸­æ–­æ ‡å¿—ï¼Œæ­¤æ—¶isInterrupted()æ–¹æ³•å°†è¿”å› falseã€‚
  * @author chou
  *
  */
@@ -12,7 +12,7 @@ public class InterruptCheck extends Object{
     public static void main(String[] args){  
         Thread t = Thread.currentThread();  
         System.out.println("Point A: t.isInterrupted()=" + t.isInterrupted());  
-        //´ı¾öÖĞ¶Ï£¬ÖĞ¶Ï×ÔÉí  
+        //å¾…å†³ä¸­æ–­ï¼Œä¸­æ–­è‡ªèº«  
         t.interrupt();  
         System.out.println("Point B: t.isInterrupted()=" + t.isInterrupted());  
         System.out.println("Point C: t.isInterrupted()=" + t.isInterrupted());  
@@ -23,7 +23,7 @@ public class InterruptCheck extends Object{
         }catch( InterruptedException x){  
             System.out.println("was interrupted");  
         }  
-        //Å×³öÒì³£ºó£¬»áÇå³ıÖĞ¶Ï±êÖ¾£¬ÕâÀï»á·µ»Øfalse  
+        //æŠ›å‡ºå¼‚å¸¸åï¼Œä¼šæ¸…é™¤ä¸­æ–­æ ‡å¿—ï¼Œè¿™é‡Œä¼šè¿”å›false  
         System.out.println("Point D: t.isInterrupted()=" + t.isInterrupted());  
     }  
 }  

@@ -21,7 +21,15 @@ hs_err_pid*
 .DS_Store
 .AppleDouble
 .LSOverride
-
+# generated files
+bin/
+gen/
+# Local configuration file (sdk path, etc)
+local.properties
+# Eclipse project files
+.classpath
+.project
+ .settings/
 # Thumbnails
 ._*
 
